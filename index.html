@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cardsUI.css">
     <script src="script.js"></script>
     <title>homepage</title>
 </head>
@@ -13,11 +12,12 @@
     <div id='navigationDiv'>
         <a href="index.html" id="logolink"><img src="images/Rityta 1.png" alt="Logo" id="logoimg"></a>
         <nav id='navigation'>
-            <a href="" class="navlink current">HOME</a>
-            <button class="navlink" id="gallericlick">GALLERI</button>
-            <a href="" class="navlink">KONTAKT</a>
+            <a href="index.html" class="navlink current">HOME</a>
+            <button class="navlink" id="gallericlick"> GALLERI<img src="images/paint-palette.png" alt="paint" class="paintIcon"></button>
+            <a href="contact.html" class="navlink">KONTAKT</a>
         </nav>
     </div>
+  
     <div id='bodywrapper'>
 
             <div class="displaywrapper">
@@ -31,7 +31,7 @@
             </section>
 
             <section class="scrolldowndiv">
-            <p>JUST NU I ATELJÉN!</p>
+            <p id="arrowText">JUST NU I ATELJÉNS GALLERI!</p>
             <!-- <img src="images/down-arrow.png" alt="scrl-down" class="scroll"> -->
             <div class="arrow bounce" id="arrow"></div>
         </section>
@@ -49,7 +49,7 @@
                     
                 </p>
 
-                <button class="contactBtn"> KONTAKTA MIG </button>
+                <button class="contactBtn" onclick="location.href='contact.html'"> KONTAKTA MIG </button>
 
             </div>
         </div>
@@ -147,8 +147,27 @@
             </div>
     </div>
 
+<footer>
+    <!-- <img src="icons/contact.png" alt="iconPerson" class="ui_icon">
+    <img src="icons/email.png" alt="emailIcon" class="ui_icon"> 
+    <p class="footerText"> Email: svenlinderoth@outlook.com </p>
+    <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon">
+    <p class="footerText"> 0707109825  </p> -->
+    <div class="footerDiv">   <p class="footerText"> test</p> </div>
 
+    <div class="footerDiv"> <p class="footerText"> test</p> </div>
+
+    <div class="footerDiv">
+        <div class="fotCol" id="copyEmailDiv">
+            <img src="icons/email.png" alt="emailIcon" class="ui_icon"> <button class="footerText emailText"> svenlinderoth@outlook.com </button> <img src="icons/copy.png" alt="copy" class="ui_icon copy">
+        </div>
+        <div class="fotCol">
+            <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon"> <p class="footerText"> 0707109825  </p>
+        </div>
+    </div>
+</footer>
 </div>
+
 <script>
     let section = document.getElementsByClassName("new_gallery");
     document.getElementById("gallericlick").onclick = function () {
@@ -177,7 +196,27 @@
     section[0].style.transform = "translateY(0)";
     
 }
+document.getElementById("arrowText").onclick = function () {
+    this.style.cursor = 'pointer';
+    'use strict';
+    
+    window.scrollTo({ 
+        top: section[0].offsetTop,
+        left: 0, 
+        behavior: 'smooth'
+    });
+    section[0].style.opacity = "1";
+    section[0].style.transform = "translateY(0)";
+    
+}
+var email = 'svenlinderoth@outlook.com';
+document.getElementById('copyEmailDiv').onclick = function () {
+        // Copy the text inside the text field
+    navigator.clipboard.writeText(email);
 
+    // Alert the copied text
+    alert("Copied the text: " + email);
+}
 </script>
 </body>
 </html>

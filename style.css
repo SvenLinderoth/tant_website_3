@@ -16,7 +16,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 20vw 30vw 30vw 20vw;
-    grid-template-rows: 20vh 60vh 10vh 60vh 20vh;
+    grid-template-rows: 20vh 60vh 20vh 30vh 40vh 40vh 40vh;
 
     background: #C8C6BF;
 }
@@ -26,6 +26,15 @@ body {
     justify-content: space-around;
     align-items: center;
     gap: 20%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: #C8C6BF;
+    z-index: 100;
+    opacity: .8;
 }
 #logolink {
     margin-top: 2%;
@@ -42,6 +51,12 @@ body {
 #gallericlick {
     background: none;
     border: none;
+
+    display: flex;
+    gap: 10px;
+}
+.paintIcon {
+    width: 1.8vw;
 }
 .navlink {
     font-size: 1.4em;
@@ -65,6 +80,14 @@ body {
     left:50%;
     transform: translateX(-50%);
 }
+/* .hide::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    height: 20px;
+} */
 .navlink:hover:before {
     width: 100%;
 }
@@ -78,6 +101,60 @@ body {
     left:50%;
     transform: translateX(-50%);
 }
+footer {
+    grid-row: end;
+    grid-column: 1 / end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 20px -5px black;
+    padding: 1.2em;
+    gap: 5%;
+
+}.footerDiv {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 7px;
+}.emailText { 
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+.fotCol {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 10px;
+    align-items: center;
+
+    align-self: flex-start;
+    margin-left: 20%;
+}
+.ui_icon {
+    width: 1.5vw;
+}
+.footerText {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2em;
+}
+.footerText:hover {
+    color: rgba(255, 255, 255, 1);
+}
+#copyEmailDiv:hover {
+    cursor: pointer;
+}
+.copy {
+    scale: .7;
+    position: relative;
+    bottom: 55%; right: 2%;
+}
 .displaywrapper {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
@@ -85,7 +162,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10%;
-    margin-top: 5%;
+    margin-top: 18%;
 }
 .sectionDisplay {
     display: flex;
@@ -124,7 +201,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;  
-
     margin-left: 10%;
 }
 .aboutMe {
@@ -132,12 +208,12 @@ body {
     flex-direction: column;
     gap: 25px;
     position: absolute;
-    top: 40%;
+    top: 35%;
 }
 .tantGimg {
     width: 25vw;
     position: absolute;
-    top: 23%;
+    top: 20%;
     left: 65%;
 }
 .contactBtn {
@@ -190,7 +266,7 @@ body {
 
 .new_gallery {
     grid-column: 1 / 5;
-    grid-row: 4 / auto;
+    grid-row: 4 / 6;
     display: flex;
     flex-direction: column;
     gap: 60px;
