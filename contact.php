@@ -73,7 +73,13 @@
             <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon"> <p class="footerText"> 0707109825  </p>
         </div>
     </div>
+    <div class="createdDiv">
+        <p class="createdBy"> website created
+            <br> by Sven Linderoth
+            <br>svenlinderoth@outlook.com
+        </p>
     <div class="socialsDiv">
+        
         <p class="hText">Social media links</p> 
         <div class="socials">
             <a href="" target="_blank"><img src="icons/facebook.png" alt="Facebook" class="socialImg"></a>
@@ -81,6 +87,7 @@
             <a href="" target="_blank"> <img src="icons/tik-tok.png" alt="TikTok" class="socialImg"></a>
             <a href="" target="_blank"> <img src="icons/twitter.png" alt="Twitter" class="socialImg"></a>
     </div>
+</div>
 </div>
 </footer>
   

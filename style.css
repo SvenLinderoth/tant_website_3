@@ -143,6 +143,7 @@ footer {
 .ui_icon {
     width: 1.5vw;
 }
+
 .footerText {
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.2em;
@@ -158,13 +159,22 @@ footer {
     position: relative;
     left: -1ch; top: -1ch;
 }
+.createdDiv {
+    align-self: flex-start;
+    display: flex;
+    gap: 1vw;
+}
+.createdBy {
+    color: white;
+    font-size: .7em;
+}
 .socialsDiv {
     align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 20%;
+    left: 10%;
     width: 60vw;
     gap: 30%;
 
@@ -240,7 +250,10 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;  
-    margin-left: 10%;
+    margin-left: 2%;
+
+    border-left: solid 1px rgb(255, 235, 218);
+    padding-left: 10%;
 }
 .aboutMe {
     display: flex;
@@ -288,7 +301,18 @@ footer {
 }
 #cnttext {
     color: var(--textcolor);
-    transition: all .2s ease-in;
+    transition: all .2s ease-in; 
+}
+#cnttext:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.2px;
+    background: rgb(255, 235, 218);
+    bottom: -3px;
+    transition: 0.4s;
+    left: 20%;
+    transform: translateX(-50%);
 }
 .contactBtn:hover, .contactBtn:active {
     background: var(--textcolor);
@@ -297,14 +321,19 @@ footer {
 }
 .contactBtn:hover #cnttext {
     color: white;
-    animation: slide 1.5s infinite;
+    animation: slide 2s infinite;
+}
+.contactBtn:hover #cnttext:before {
+    width: 68%;
+    left: 50%;
 }
 @keyframes slide {
     0%, 20%, 50%, 80%, 100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     20% {
         transform: translateX(-15px);
+
     }
     40% {
       transform: translateX(10px);
@@ -406,6 +435,7 @@ footer {
 .read-more-wrap b {
     font-size: 1.3em;
 }
+
 
 .menu {
     display: none;
