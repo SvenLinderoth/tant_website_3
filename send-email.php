@@ -1,19 +1,14 @@
 <?php
-
 if (!isset($_POST['submit'])) {
-
     echo "error; you need to submit the form!";
 }
 
+if (isset($_POST['submit'])) {
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $telephone = $_POST['telephone'];
 $message = $_POST['message'];
 
-if (empty($name) || empty($visitor_email) || empty($telephone) || empty($message)) {
-    echo 'fill out all the fields';
-    exit;
-}
 $subject = $_POST['subject'];
 
 $email_from = $visitor_email;
@@ -24,5 +19,5 @@ $to = 'svenlinderoth@outlook.com';
 $headers = "From: $email_from \r\n";
 
 mail($to, $email_subject, $email_body, $headers);
-
+}
 ?>

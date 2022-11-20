@@ -29,6 +29,9 @@ button {
     
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+
+    position: relative;
+    top: -6%;
   }
   
   form {

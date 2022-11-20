@@ -6,6 +6,7 @@
     color: var(--textcolor);
     font-family: 'Cinzel', serif;;
 }
+
 body {
     background: #C8C6BF;
     --textcolor: #5D1B00;
@@ -151,9 +152,9 @@ footer {
     cursor: pointer;
 }
 .copy {
-    scale: .7;
+    scale: .6;
     position: relative;
-    bottom: 55%; right: 2%;
+    left: -1ch; top: -1ch;
 }
 .displaywrapper {
     grid-column: 1 / 3;
@@ -209,6 +210,23 @@ footer {
     gap: 25px;
     position: absolute;
     top: 35%;
+
+    font-size: 1.2em;
+}
+.aboutMe h1 {
+    font-size: 2.2em;
+    /* background:  linear-gradient(to bottom, #5d1b00, #6d2a11, #7d381e, #8e472c, #9e563a, #a86348, #b17156, #ba7e65, #be8c78, #c09a8a, #c2a89e, #c3b6b1); */
+    background: var(--textcolor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -2px -2px 70px var(--textcolor);
+
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color:var(--textcolor);
+}
+.aboutMe p {
+    color: var(--textcolor);
 }
 .tantGimg {
     width: 25vw;
@@ -217,25 +235,46 @@ footer {
     left: 65%;
 }
 .contactBtn {
-    width: 16vw;
-    height: 8vh;
-    border-radius: 42px;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 4px;
     background: white;
     color: var(--textcolor);
     font-size: 1em;
-
+    font-weight: bold;
     border: .1px solid black;
 
     box-shadow: 0 5px 15px -10px black;
 
     transition: all .2s ease-in;
 }
+#cnttext {
+    color: var(--textcolor);
+    transition: all .2s ease-in;
+}
 .contactBtn:hover, .contactBtn:active {
     background: var(--textcolor);
-    color: white;
     transform: translate(3%);
     cursor: pointer;
 }
+.contactBtn:hover #cnttext {
+    color: white;
+    animation: slide 1.5s infinite;
+}
+@keyframes slide {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-15px);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    60% {
+      transform: translateX(5px);
+    }
+  }
 
 /* ARROW BOUNCER */
 .arrow
@@ -257,10 +296,10 @@ footer {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-25px);
+    transform: translateY(-15px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
@@ -328,4 +367,113 @@ footer {
 }
 .read-more-wrap b {
     font-size: 1.3em;
+}
+
+.menu {
+    display: none;
+}
+.hamburger {
+    visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+    #bodywrapper {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 20vw 30vw 30vw 20vw;
+        grid-template-rows: repeat(auto-fill, 50vh);
+    
+        background: #C8C6BF;
+    }
+    .displaywrapper {
+        grid-column: 1 / end;
+        grid-row: 1 / 2;
+        margin-top: 10vh;
+    }
+    .displayImg {
+        width: 30%;
+    }
+    .tantGimg {
+        grid-column: 2 / end;
+        grid-row: 2 / 3;
+        position: relative;
+        left: 40%; top: -5%;
+        width: 70%;
+    }
+    .aboutMeDiv {
+        grid-column: 1 / end;
+        grid-row: 2 / 3;
+        position: relative;
+        top: -20%; right: 5%;
+
+        padding: 20px;
+    }
+    .new_gallery {
+        grid-row: 5 / 6;
+        position: relative;
+        top: 10%;
+    }
+    .rowGallery {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contactBtn {
+        width: 55vw;
+    }
+
+
+    #navigationDiv {
+        display: none;
+    }
+
+    .hamburger {
+        position: fixed;
+        z-index: 100;
+        top: 1rem;
+        right: 1rem;
+        padding: 4px;
+        border: black solid 1px;
+        background: white;
+        cursor: pointer;
+
+        visibility: visible;
+      }
+      .closeIcon {
+        display: none;
+      }
+      .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(2px);
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .showMenu {
+        transform: translateY(0);
+      }
+      .menuItem {
+        display: block;
+        margin: 2rem 4rem;
+        font-size: 1.8rem;
+        color: white;
+        text-decoration: none;
+      }
+      .menuItem:hover {
+        text-decoration: underline;
+      }
 }

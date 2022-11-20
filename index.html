@@ -17,7 +17,39 @@
             <a href="contact.html" class="navlink">KONTAKT</a>
         </nav>
     </div>
-  
+
+        <ul class="menu">
+        <li><a class="menuItem" href="index.html">Home</a></li>
+        <li><a class="menuItem" href="index.html">Galleri</a></li>
+        <li><a class="menuItem" href="contact.html">Kontaka Mig</a></li>
+      </ul>
+      <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+      </button>
+
+      <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+}
+hamburger.addEventListener("click", toggleMenu);
+</script>
+
     <div id='bodywrapper'>
 
             <div class="displaywrapper">
@@ -45,11 +77,11 @@
                     Målandet och ritandet har alltid funnits vid min sida <br> Det finns stunder som endast bilder eller konst kan återväcka minnen och känslor hos personer. Det är något jag älskar med konst i alla dess olika former! <br>
                     <br>
                     Ta en titt i galleri & tveka inte att höra av er till mig!
-                    <br> Jag finns tillgänglig via både mail & telefon!
+                    <br> Jag finns tillgänglig via både mail & telefon
                     
                 </p>
 
-                <button class="contactBtn" onclick="location.href='contact.html'"> KONTAKTA MIG </button>
+                <button class="contactBtn" onclick="location.href='contact.html'"> <p id="cnttext"> KONTAKTA MIG </p></button>
 
             </div>
         </div>
@@ -169,6 +201,7 @@
 </div>
 
 <script>
+
     let section = document.getElementsByClassName("new_gallery");
     document.getElementById("gallericlick").onclick = function () {
   
