@@ -65,24 +65,24 @@
     </div>
 
     <footer>
-      <!-- <img src="icons/contact.png" alt="iconPerson" class="ui_icon">
-      <img src="icons/email.png" alt="emailIcon" class="ui_icon"> 
-      <p class="footerText"> Email: svenlinderoth@outlook.com </p>
-      <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon">
-      <p class="footerText"> 0707109825  </p> -->
-      <div class="footerDiv">   <p class="footerText"> test</p> </div>
-  
-      <div class="footerDiv"> <p class="footerText"> test</p> </div>
-  
-      <div class="footerDiv">
-          <div class="fotCol" id="copyEmailDiv">
-              <img src="icons/email.png" alt="emailIcon" class="ui_icon"> <button class="footerText emailText"> svenlinderoth@outlook.com </button> <img src="icons/copy.png" alt="copy" class="ui_icon copy">
-          </div>
-          <div class="fotCol">
-              <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon"> <p class="footerText"> 0707109825  </p>
-          </div>
-      </div>
-  </footer>
+    <div class="footerDiv"><p class="hText"> Contact Information</p> 
+        <div class="fotCol" id="copyEmailDiv">
+            <img src="icons/email.png" alt="emailIcon" class="ui_icon"><button class="footerText emailText"> svenlinderoth@outlook.com </button> <img src="icons/copy.png" alt="copy" class="ui_icon copy">
+        </div>
+        <div class="fotCol">
+            <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon"> <p class="footerText"> 0707109825  </p>
+        </div>
+    </div>
+    <div class="socialsDiv">
+        <p class="hText">Social media links</p> 
+        <div class="socials">
+            <a href="" target="_blank"><img src="icons/facebook.png" alt="Facebook" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/instagram.png" alt="Instagram" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/tik-tok.png" alt="TikTok" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/twitter.png" alt="Twitter" class="socialImg"></a>
+    </div>
+</div>
+</footer>
   
 </div>
 <?php 

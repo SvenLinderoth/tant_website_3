@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script src="script.js"></script>
     <title>homepage</title>
 </head>
 <body>
+    
     <div id='navigationDiv'>
         <a href="index.html" id="logolink"><img src="images/Rityta 1.png" alt="Logo" id="logoimg"></a>
         <nav id='navigation'>
@@ -17,7 +20,7 @@
             <a href="contact.html" class="navlink">KONTAKT</a>
         </nav>
     </div>
-
+    <div class="hiddenLogo"> <a href="index.html" id="hiddenImg"><img src="images/Rityta 1.png" alt="Logo" id="logoimg"></a></div>
         <ul class="menu">
         <li><a class="menuItem" href="index.html">Home</a></li>
         <li><a class="menuItem" href="index.html">Galleri</a></li>
@@ -33,9 +36,11 @@
         const menu = document.querySelector(".menu");
         const menuItems = document.querySelectorAll(".menuItem");
         const hamburger= document.querySelector(".hamburger");
-        const closeIcon= document.querySelector(".closeIcon");
+        const closeIcon = document.querySelector(".closeIcon");
         const menuIcon = document.querySelector(".menuIcon");
 
+        closeIcon.style.display = 'none';
+        
         function toggleMenu() {
         if (menu.classList.contains("showMenu")) {
             menu.classList.remove("showMenu");
@@ -180,24 +185,25 @@ hamburger.addEventListener("click", toggleMenu);
     </div>
 
 <footer>
-    <!-- <img src="icons/contact.png" alt="iconPerson" class="ui_icon">
-    <img src="icons/email.png" alt="emailIcon" class="ui_icon"> 
-    <p class="footerText"> Email: svenlinderoth@outlook.com </p>
-    <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon">
-    <p class="footerText"> 0707109825  </p> -->
-    <div class="footerDiv">   <p class="footerText"> test</p> </div>
-
-    <div class="footerDiv"> <p class="footerText"> test</p> </div>
-
-    <div class="footerDiv">
+    <div class="footerDiv"><p class="hText"> Contact Information</p> 
         <div class="fotCol" id="copyEmailDiv">
-            <img src="icons/email.png" alt="emailIcon" class="ui_icon"> <button class="footerText emailText"> svenlinderoth@outlook.com </button> <img src="icons/copy.png" alt="copy" class="ui_icon copy">
+            <img src="icons/email.png" alt="emailIcon" class="ui_icon"><button class="footerText emailText"> svenlinderoth@outlook.com </button> <img src="icons/copy.png" alt="copy" class="ui_icon copy">
         </div>
         <div class="fotCol">
             <img src="icons/phone-call.png" alt="phoneIcon" class="ui_icon"> <p class="footerText"> 0707109825  </p>
         </div>
     </div>
+    <div class="socialsDiv">
+        <p class="hText">Social media links</p> 
+        <div class="socials">
+            <a href="" target="_blank"><img src="icons/facebook.png" alt="Facebook" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/instagram.png" alt="Instagram" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/tik-tok.png" alt="TikTok" class="socialImg"></a>
+            <a href="" target="_blank"> <img src="icons/twitter.png" alt="Twitter" class="socialImg"></a>
+    </div>
+</div>
 </footer>
+
 </div>
 
 <script>

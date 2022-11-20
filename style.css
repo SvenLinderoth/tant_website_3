@@ -108,10 +108,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 0 20px -5px black;
     padding: 1.2em;
-    gap: 5%;
+    gap: 10px;
 
 }.footerDiv {
     width: 25%;
@@ -122,7 +123,8 @@ footer {
     flex-direction: column;
 
     gap: 7px;
-}.emailText { 
+}
+.emailText { 
     background: none;
     border: none;
     cursor: pointer;
@@ -155,6 +157,42 @@ footer {
     scale: .6;
     position: relative;
     left: -1ch; top: -1ch;
+}
+.socialsDiv {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20%;
+    width: 60vw;
+    gap: 30%;
+
+    border-top: solid 1px rgb(255, 235, 218);
+    padding-top: 5px;
+}
+.socials {
+    display: flex;
+    gap: 30%;
+}
+.socialImg {
+    width: 1.7vw;
+    filter: contrast(80%);
+    filter: brightness(80%);
+    filter: saturate(80%);
+    opacity: .8;
+}
+.socialImg:hover {
+    opacity: 1;
+    filter: contrast(100%);
+    filter: brightness(150%);
+    filter: saturate(150%);
+    cursor: pointer;
+}
+.hText {
+    font-size: 1.2em;
+    color: rgb(255, 235, 218);
+
 }
 .displaywrapper {
     grid-column: 1 / 3;
@@ -237,7 +275,7 @@ footer {
 .contactBtn {
     width: 15vw;
     height: 7vh;
-    border-radius: 4px;
+    border-radius: 224px;
     background: white;
     color: var(--textcolor);
     font-size: 1em;
@@ -375,6 +413,10 @@ footer {
 .hamburger {
     visibility: hidden;
 }
+.hiddenLogo {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     #bodywrapper {
         width: 100vw;
@@ -385,10 +427,20 @@ footer {
     
         background: #C8C6BF;
     }
+    .hiddenLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        margin: 2%;
+    }
+    .hiddenImg {
+        width: 100%;
+    }
     .displaywrapper {
         grid-column: 1 / end;
         grid-row: 1 / 2;
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
     .displayImg {
         width: 30%;
@@ -411,7 +463,7 @@ footer {
     .new_gallery {
         grid-row: 5 / 6;
         position: relative;
-        top: 10%;
+        top: 15%;
     }
     .rowGallery {
         padding: 10px;
@@ -421,8 +473,8 @@ footer {
     }
     .contactBtn {
         width: 55vw;
+        
     }
-
 
     #navigationDiv {
         display: none;
@@ -434,11 +486,20 @@ footer {
         top: 1rem;
         right: 1rem;
         padding: 4px;
-        border: black solid 1px;
-        background: white;
+        /* border: black solid 1px;
+        border-radius: 100%;
+        background: white; */
+        background: none;
+        border: none;
         cursor: pointer;
+        
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         visibility: visible;
+        scale: 2;
       }
       .closeIcon {
         display: none;
