@@ -256,6 +256,16 @@ document.getElementById('copyEmailDiv').onclick = function () {
     // Alert the copied text
     alert("Copied the text: " + email);
 }
+if (location.href === 'http://127.0.0.1:5500/index.html?gallery') { //CHANGE INTO ACTUAL URL TO WORK
+      window.scrollTo({ 
+        top: section[0].offsetTop,
+        left: 0, 
+        behavior: 'smooth'
+      });
+      section[0].style.opacity = "1";
+      section[0].style.transform = "translateY(0)";
+}
+
 </script>
 </body>
 </html>
